@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add authMiddleware configuration
+feat: Add signin and signup pages
 "
 # Push changes to the remote repository
 git push origin HEAD
