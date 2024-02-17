@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: add folder structure
+feat: adding ClerkProvider 
 "
 # Push changes to the remote repository
 git push origin HEAD
