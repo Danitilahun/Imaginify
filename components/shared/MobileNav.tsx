@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import Image from "next/image";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const MobileNav = () => {
   return (
@@ -21,6 +22,33 @@ const MobileNav = () => {
           height={28}
         />
       </Link>
+
+      <nav className="flex gap-2">
+        <SignedIn>
+          <UserButton afterSignOutUrl="" />
+
+          <Sheet>
+            <SheetTrigger>
+              <Image
+                src="/assets/icons/menu.svg"
+                alt="menu"
+                width={32}
+                height={32}
+                className="cursor-pointer"
+              />
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Are you absolutely sure?</SheetTitle>
+                <SheetDescription>
+                  This action cannot be undone. This will permanently delete
+                  your account and remove your data from our servers.
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </SignedIn>
+      </nav>
     </header>
   );
 };

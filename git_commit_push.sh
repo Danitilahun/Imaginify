@@ -7,14 +7,15 @@ git add .
 git commit -m "
 feat: Add MobileNav component for mobile navigation
 
-This commit introduces the MobileNav component, which provides a header for mobile navigation. The component includes a logo and is designed to be responsive for mobile devices.
+This commit introduces the MobileNav component, which provides a header for mobile navigation. The component includes a logo, a user button for signed-in users, and a menu trigger for additional options. 
 
 Changes:
 - Created the MobileNav component to serve as the header for mobile navigation.
 - Implemented a link to the home page with the application logo.
-- Utilized the next/image component for optimized image loading and rendering.
+- Added a UserButton component for signed-in users, allowing them to access their account settings.
+- Added a menu trigger that displays additional options when clicked.
 
-This addition enhances the mobile user experience by providing easy access to navigate back to the home page from any screen within the application.
+This addition enhances the mobile user experience by providing easy access to navigate back to the home page, access account settings, and access additional options.
 
 Files modified:
 - Added MobileNav.tsx file to implement the mobile navigation header.
