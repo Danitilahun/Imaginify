@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: change main image position
+feat: add folder structure
 "
 # Push changes to the remote repository
 git push origin HEAD
