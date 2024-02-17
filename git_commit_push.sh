@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: adding ClerkProvider 
+feat: Add authMiddleware configuration
 "
 # Push changes to the remote repository
 git push origin HEAD
