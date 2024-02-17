@@ -5,8 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add Tailwind CSS customizations and utility classes
-
+feat: Add images and public folder
 "
 # Push changes to the remote repository
 git push origin HEAD
