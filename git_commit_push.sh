@@ -5,18 +5,20 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add login button to MobileNav component for signed-out users
+feat: Add database connection setup using Mongoose
 
-This commit adds a login button to the MobileNav component specifically for signed-out users. The button allows users to navigate to the sign-in page to log in to their accounts.
+This commit adds a module to establish a connection to a MongoDB database using Mongoose. The module exports a function called connectToDatabase, which ensures a singleton connection to the database.
 
 Changes:
-- Added a SignedOut wrapper to conditionally render the login button when the user is signed out.
-- Implemented a button with a link to the sign-in page within the SignedOut wrapper.
+- Created a module to handle database connection setup using Mongoose.
+- Implemented a function called connectToDatabase to establish a connection to the MongoDB database.
+- Added error handling to check for the presence of the MONGODB_URL environment variable.
+- Used a cached object to ensure a singleton connection to the database.
 
-This addition enhances the user experience for signed-out users by providing a clear and accessible way to log in to their accounts directly from the mobile navigation header.
+This addition enables the application to establish a connection to the MongoDB database, allowing seamless interaction with the database for data storage and retrieval.
 
 Files modified:
-- Updated MobileNav.tsx to include the login button for signed-out users.
+- Added database.ts to set up the database connection using Mongoose.
 
 "
 # Push changes to the remote repository
