@@ -5,17 +5,18 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-chore(types): Add type declarations for various parameters
+chore(utils): Add utility functions and type declarations
 
-This commit adds type declarations for various parameters used throughout the application. These type declarations provide clarity and improve the maintainability of the codebase by documenting the expected structure of different data objects.
+This commit adds various utility functions and type declarations to the project to improve code readability, maintainability, and reusability.
 
 Changes:
-- Added type declarations for CreateUserParams, UpdateUserParams, AddImageParams, UpdateImageParams, Transformations, CheckoutTransactionParams, CreateTransactionParams, TransformationTypeKey, FormUrlQueryParams, UrlQueryParams, RemoveUrlQueryParams, SearchParamProps, TransformationFormProps, and TransformedImageProps.
+- Added type declarations for CreateUserParams, UpdateUserParams, AddImageParams, UpdateImageParams, Transformations, CheckoutTransactionParams, CreateTransactionParams, TransformationTypeKey, FormUrlQueryParams, RemoveUrlQueryParams, SearchParamProps, TransformationFormProps, and TransformedImageProps to provide clarity on the structure of different data objects.
+- Added utility functions handleError, cn, shimmer, toBase64, dataUrl, formUrlQuery, removeKeysFromQuery, debounce, getImageSize, download, and deepMergeObjects to handle common tasks such as error handling, class name concatenation, placeholder generation, data URL creation, URL query manipulation, debouncing, image size retrieval, image downloading, and deep object merging.
 
-These type declarations enhance the readability of the code and help prevent potential bugs by enforcing strict type checking.
+These utility functions enhance code maintainability and reduce code duplication by providing reusable solutions for common tasks.
 
 Files modified:
-- Added type declarations for various parameters in the codebase.
+- Modified utils.ts to include the new utility functions and type declarations.
 
 "
 # Push changes to the remote repository
