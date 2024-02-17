@@ -5,21 +5,18 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add MobileNav component for mobile navigation
+feat: Add login button to MobileNav component for signed-out users
 
-This commit introduces the MobileNav component, which provides a header for mobile navigation. The component includes a logo, a user button for signed-in users, and a menu trigger for additional options.
+This commit adds a login button to the MobileNav component specifically for signed-out users. The button allows users to navigate to the sign-in page to log in to their accounts.
 
 Changes:
-- Created the MobileNav component to serve as the header for mobile navigation.
-- Implemented a link to the home page with the application logo.
-- Added a UserButton component for signed-in users, allowing them to access their account settings.
-- Added a menu trigger that displays additional options when clicked.
-- Implemented navigation links based on the provided navLinks constant, highlighting the active link based on the current pathname.
+- Added a SignedOut wrapper to conditionally render the login button when the user is signed out.
+- Implemented a button with a link to the sign-in page within the SignedOut wrapper.
 
-This addition enhances the mobile user experience by providing easy access to navigate back to the home page, access account settings, and access additional options.
+This addition enhances the user experience for signed-out users by providing a clear and accessible way to log in to their accounts directly from the mobile navigation header.
 
 Files modified:
-- Added MobileNav.tsx file to implement the mobile navigation header.
+- Updated MobileNav.tsx to include the login button for signed-out users.
 
 "
 # Push changes to the remote repository
