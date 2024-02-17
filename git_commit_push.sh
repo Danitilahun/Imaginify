@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add RootLayout component with IBM Plex Sans font and metadata
+feat: Add Tailwind CSS configuration with customizations and plugins
 
 "
 # Push changes to the remote repository
