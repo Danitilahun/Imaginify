@@ -5,21 +5,20 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add Mongoose model for User documents
+feat: Add Mongoose model for Transaction documents
 
-This commit adds a Mongoose model for representing User documents in the MongoDB database. The model defines the schema for User documents and exports it for use in other parts of the application.
+This commit introduces a Mongoose model to represent Transaction documents in the MongoDB database. The model defines the schema for Transaction documents and exports it for use in other parts of the application.
 
 Changes:
-- Created a Mongoose schema for User documents with fields representing various attributes of a user.
-- Defined fields such as clerkId, email, username, photo, firstName, lastName, planId, and creditBalance in the schema.
-- Used unique constraints for clerkId, email, and username to ensure their uniqueness.
-- Set default values for planId and creditBalance fields.
-- Implemented a model named User to interact with the MongoDB collection for User documents, ensuring that the model is not redefined if already defined.
+- Defined a Mongoose schema for Transaction documents with fields representing various attributes of a transaction.
+- Included fields such as createdAt, stripeId, amount, plan, credits, and buyer in the schema.
+- Applied unique constraint for stripeId to ensure its uniqueness.
+- Implemented a model named Transaction to interact with the MongoDB collection for Transaction documents, preventing redefinition if already defined.
 
-This addition enables the application to store and retrieve User documents from the MongoDB database, providing a structured way to manage user data.
+This addition facilitates the storage and retrieval of Transaction documents from the MongoDB database, providing structured data management for transactions in the application.
 
 Files modified:
-- Created a new file named user.ts to define the Mongoose model for User documents.
+- Created a new file named transaction.ts to define the Mongoose model for Transaction documents.
 
 "
 # Push changes to the remote repository
