@@ -5,19 +5,19 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add additional navigation links to Sidebar component
+feat: Add MobileNav component for mobile navigation
 
-This commit extends the Sidebar component by adding additional navigation links beyond the initial set displayed. The new links are dynamically rendered based on the provided navLinks array, starting from the 7th item (index 6) to the end of the array. Each link includes an icon, label, and functionality to highlight the active link based on the current pathname.
+This commit introduces the MobileNav component, which provides a header for mobile navigation. The component includes a logo and is designed to be responsive for mobile devices.
 
 Changes:
-- Updated the Sidebar component to include additional navigation links.
-- Implemented dynamic rendering of navigation links beyond the initial set.
-- Added functionality to highlight the active link based on the current pathname.
+- Created the MobileNav component to serve as the header for mobile navigation.
+- Implemented a link to the home page with the application logo.
+- Utilized the next/image component for optimized image loading and rendering.
 
-This enhancement increases the accessibility of the application by providing users with access to additional pages directly from the Sidebar.
+This addition enhances the mobile user experience by providing easy access to navigate back to the home page from any screen within the application.
 
 Files modified:
-- Updated Sidebar.tsx file to include additional navigation links.
+- Added MobileNav.tsx file to implement the mobile navigation header.
 
 "
 # Push changes to the remote repository
