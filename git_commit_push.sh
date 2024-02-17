@@ -5,17 +5,19 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add constants and configurations
+feat: Add Sidebar component
 
-This commit introduces various constants and configurations essential for the application's functionality. These include navigation links, subscription plans, transformation types, aspect ratio options, default form values, and credit fee.
+This commit introduces the Sidebar component, which is responsible for rendering navigation links in the application's sidebar. It utilizes the navLinks constant from the constants file to dynamically generate navigation links. The component also uses the SignedIn component from the Clerk library to conditionally render navigation links based on user authentication status. 
 
 Changes:
-- Added constants for navigation links, plans, transformation types, aspect ratio options, default form values, and credit fee.
+- Added Sidebar component.
+- Implemented navigation links rendering using the navLinks constant.
+- Utilized SignedIn component to conditionally render navigation links based on user authentication status.
 
-These constants and configurations are crucial for defining the behavior and options available throughout the application.
+This component enhances the application's user interface by providing easy access to different sections of the application through the sidebar navigation.
 
 Files modified:
-- Added constants.ts file containing the defined constants and configurations.
+- Added Sidebar.tsx file containing the Sidebar component implementation.
 
 "
 # Push changes to the remote repository
