@@ -5,12 +5,12 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(client): Implement TransformationForm component
+feat(client): Implement AddTransformationTypePage
 
-This commit adds the TransformationForm component, which allows users to add or update images with various transformations. It includes form fields for title, aspect ratio, color, and prompt, along with a media uploader for selecting images. Users can apply transformations and save the image with the specified settings.
+This commit implements the AddTransformationTypePage, which allows users to add new transformations of a specific type. It includes the TransformationForm component to handle the addition of images with the specified transformation type. Users must be authenticated, and their credit balance is checked before allowing them to add a new transformation.
 
 Files modified:
-- Added `TransformationForm` component to handle image transformations and updates.
+- Added `AddTransformationTypePage` to handle adding transformations of a specific type.
 
 "
 # Push changes to the remote repository
