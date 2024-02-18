@@ -5,21 +5,17 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(component): Implement TransformedImage component
+fix(server): Fix revalidatePath import and deleteImage redirection
 
-This commit adds the TransformedImage component, which displays transformed images and provides an option to download the image. The component integrates with next-cloudinary to render transformed images based on provided transformation configurations.
+This commit fixes two issues in the server-side code related to imports and redirection:
 
-Changes:
-- Added TransformedImage component to display transformed images and handle download functionality.
-- Implemented downloadHandler function to handle image download upon button click.
-- Integrated next-cloudinary's CldImage component to render transformed images.
-- Rendered a placeholder if no transformed image is available.
-- Implemented a loading spinner during image transformation, with a timeout for error handling.
+1. The `revalidatePath` function from `next/cache` is imported incorrectly. It should be imported as a named export, but the previous import statement did not specify it. This commit corrects the import statement to properly import the `revalidatePath` function.
 
-The TransformedImage component enhances user experience by providing a visual representation of transformed images and allowing users to download the transformed image.
+2. In the `deleteImage` function, the redirection after deleting an image is incorrect. The `redirect` function from `next/navigation` is used to redirect the user to the homepage ("/"), but it should not be called in the `finally` block. This commit removes the `redirect` function from the `finally` block to ensure that it doesn't interfere with the deletion process.
 
 Files modified:
-- Added TransformedImage component implementation.
+- Modified the import statement for `revalidatePath` to import it as a named export.
+- Removed the `redirect` function call from the `finally` block in the `deleteImage` function.
 
 "
 # Push changes to the remote repository
