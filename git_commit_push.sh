@@ -5,17 +5,22 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-chore(middleware): Update public routes for middleware
+feat(component): Add Header component
 
-This commit updates the list of public routes used in the middleware to include the following routes: '/', '/api/webhooks/clerk', and '/api/webhooks/stripe'. These routes are accessible without authentication and are excluded from the middleware's authentication check.
+This commit adds a Header component, which consists of a title and an optional subtitle. The component is designed to display the title in a bold h2 format and the subtitle in a regular paragraph format.
 
 Changes:
-- Added the specified routes to the list of public routes used in the middleware.
+- Added Header component.
+- Props:
+  - title: string (required) - Specifies the title to be displayed.
+  - subtitle?: string (optional) - Specifies an optional subtitle to be displayed beneath the title.
+- Styled the title with h2-bold class and the subtitle with p-16-regular class.
+- Conditionally renders the subtitle if it is provided.
 
-This update ensures that the specified routes remain accessible without authentication, allowing external services to interact with the application's webhook endpoints and public-facing routes.
+This component can be reused throughout the application to display headers with consistent styling.
 
 Files modified:
-- Middleware configuration file where public routes are defined.
+- Added Header component file.
 
 
 "
