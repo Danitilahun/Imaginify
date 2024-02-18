@@ -5,22 +5,21 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(component): Implement MediaUploader component
+feat(component): Implement TransformedImage component
 
-This commit introduces the MediaUploader component, which allows users to upload images and displays the uploaded image or a placeholder if no image is uploaded. The component integrates with the next-cloudinary package for image uploading and rendering.
+This commit adds the TransformedImage component, which displays transformed images and provides an option to download the image. The component integrates with next-cloudinary to render transformed images based on provided transformation configurations.
 
 Changes:
-- Added the MediaUploader component to facilitate image uploading and display.
-- Implemented functionality to handle successful image uploads, updating state and displaying success toast notifications.
-- Implemented functionality to handle upload errors and display error toast notifications.
-- Integrated the next-cloudinary CldUploadWidget for image uploading.
-- Rendered the uploaded image or a placeholder based on the presence of the publicId.
-- Added styles and interactions for the upload widget and placeholder.
+- Added TransformedImage component to display transformed images and handle download functionality.
+- Implemented downloadHandler function to handle image download upon button click.
+- Integrated next-cloudinary's CldImage component to render transformed images.
+- Rendered a placeholder if no transformed image is available.
+- Implemented a loading spinner during image transformation, with a timeout for error handling.
 
-The MediaUploader component enhances user experience by providing a seamless image uploading process with informative toast notifications.
+The TransformedImage component enhances user experience by providing a visual representation of transformed images and allowing users to download the transformed image.
 
 Files modified:
-- Added MediaUploader component implementation.
+- Added TransformedImage component implementation.
 
 "
 # Push changes to the remote repository
