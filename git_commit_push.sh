@@ -5,17 +5,17 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-fix(server): Fix revalidatePath import and deleteImage redirection
+feat(server): Implement checkoutCredits and createTransaction functions
 
-This commit fixes two issues in the server-side code related to imports and redirection:
+This commit adds two new server-side functions to handle credit transactions:
 
-1. The `revalidatePath` function from `next/cache` is imported incorrectly. It should be imported as a named export, but the previous import statement did not specify it. This commit corrects the import statement to properly import the `revalidatePath` function.
+1. `checkoutCredits`: This function creates a checkout session using the Stripe API to facilitate the purchase of credits. It calculates the total amount based on the provided transaction details, creates a session with the Stripe API, and redirects the user to the checkout page.
 
-2. In the `deleteImage` function, the redirection after deleting an image is incorrect. The `redirect` function from `next/navigation` is used to redirect the user to the homepage ("/"), but it should not be called in the `finally` block. This commit removes the `redirect` function from the `finally` block to ensure that it doesn't interfere with the deletion process.
+2. `createTransaction`: This function creates a new transaction in the database and updates the user's credits accordingly. It first connects to the database, then creates a new transaction document with the provided details, and updates the user's credits using the `updateCredits` function from `user.actions`.
 
 Files modified:
-- Modified the import statement for `revalidatePath` to import it as a named export.
-- Removed the `redirect` function call from the `finally` block in the `deleteImage` function.
+- Added `checkoutCredits` function to handle credit checkout process.
+- Added `createTransaction` function to create new transactions in the database.
 
 "
 # Push changes to the remote repository
