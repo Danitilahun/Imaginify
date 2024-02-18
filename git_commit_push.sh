@@ -5,24 +5,21 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(page): Add AddTransformationTypePage component
+feat(component): Add CustomField component
 
-This commit adds the AddTransformationTypePage component, which is responsible for rendering a page to add a specific transformation type. The page displays a header with the title and subtitle of the transformation type.
+This commit introduces the CustomField component, which is a reusable component for rendering custom form fields. It takes props for control (from React Hook Form), render function, name (corresponding to the form schema), formLabel (optional), and className (optional). Inside the component, it uses FormField, FormItem, FormControl, FormLabel, and FormMessage components from the ui/form module.
 
 Changes:
-- Added AddTransformationTypePage component.
-- Imported Header component from "@/components/shared/Header".
-- Imported transformationTypes and getUserById from respective locations.
-- Imported auth and redirect from "@clerk/nextjs" and "next/navigation" respectively (commented out for now).
-- Declared the AddTransformationTypePage function component with the necessary props.
-- Retrieves the transformation type based on the provided type parameter.
-- Renders the Header component with the title and subtitle of the transformation type.
-- The TransformationForm component is currently commented out but can be uncommented to add a form for adding transformations.
+- Added CustomField component file.
+- Imported necessary dependencies.
+- Defined CustomFieldProps type for prop validation.
+- Implemented the CustomField component, which renders a form field with a form label, control, and error message.
+- Exported the CustomField component as the default export.
 
-This page component serves as the entry point for adding a specific type of transformation.
+This component enhances reusability and maintainability by providing a standardized way to render custom form fields across the application.
 
 Files modified:
-- Added AddTransformationTypePage component file.
+- Added CustomField component file.
 
 
 "
