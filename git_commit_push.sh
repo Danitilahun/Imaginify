@@ -5,22 +5,24 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(component): Add Header component
+feat(page): Add AddTransformationTypePage component
 
-This commit adds a Header component, which consists of a title and an optional subtitle. The component is designed to display the title in a bold h2 format and the subtitle in a regular paragraph format.
+This commit adds the AddTransformationTypePage component, which is responsible for rendering a page to add a specific transformation type. The page displays a header with the title and subtitle of the transformation type.
 
 Changes:
-- Added Header component.
-- Props:
-  - title: string (required) - Specifies the title to be displayed.
-  - subtitle?: string (optional) - Specifies an optional subtitle to be displayed beneath the title.
-- Styled the title with h2-bold class and the subtitle with p-16-regular class.
-- Conditionally renders the subtitle if it is provided.
+- Added AddTransformationTypePage component.
+- Imported Header component from "@/components/shared/Header".
+- Imported transformationTypes and getUserById from respective locations.
+- Imported auth and redirect from "@clerk/nextjs" and "next/navigation" respectively (commented out for now).
+- Declared the AddTransformationTypePage function component with the necessary props.
+- Retrieves the transformation type based on the provided type parameter.
+- Renders the Header component with the title and subtitle of the transformation type.
+- The TransformationForm component is currently commented out but can be uncommented to add a form for adding transformations.
 
-This component can be reused throughout the application to display headers with consistent styling.
+This page component serves as the entry point for adding a specific type of transformation.
 
 Files modified:
-- Added Header component file.
+- Added AddTransformationTypePage component file.
 
 
 "
