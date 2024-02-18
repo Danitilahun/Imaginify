@@ -5,17 +5,12 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat(server): Implement checkoutCredits and createTransaction functions
+feat(client): Implement InsufficientCreditsModal component
 
-This commit adds two new server-side functions to handle credit transactions:
-
-1. `checkoutCredits`: This function creates a checkout session using the Stripe API to facilitate the purchase of credits. It calculates the total amount based on the provided transaction details, creates a session with the Stripe API, and redirects the user to the checkout page.
-
-2. `createTransaction`: This function creates a new transaction in the database and updates the user's credits accordingly. It first connects to the database, then creates a new transaction document with the provided details, and updates the user's credits using the `updateCredits` function from `user.actions`.
+This commit adds the InsufficientCreditsModal component to display a modal dialog when a user has insufficient credits. The modal provides information about the insufficient credits situation and prompts the user to either cancel or proceed to purchase more credits.
 
 Files modified:
-- Added `checkoutCredits` function to handle credit checkout process.
-- Added `createTransaction` function to create new transactions in the database.
+- Added `InsufficientCreditsModal` component to display a modal dialog for insufficient credits.
 
 "
 # Push changes to the remote repository
