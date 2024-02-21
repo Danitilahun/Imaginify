@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-chore: Implement search functionality in Search component
+feat: Implement delete confirmation functionality in DeleteConfirmation component
 "
 # Push changes to the remote repository
 git push origin HEAD
