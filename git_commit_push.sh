@@ -5,12 +5,13 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Implement custom toast notifications
+feat: Implement Toaster component for displaying toast notifications
 
-- Created ToastProvider, ToastViewport, Toast, ToastTitle, ToastDescription, ToastClose, and ToastAction components for custom toast notifications
-- Used Radix UI's toast primitives for building the components
-- Added variant handling for different toast styles (default and destructive)
-- Enhanced accessibility and interaction behaviors for toast components
+- Created Toaster component to render toast notifications using custom UI components
+- Utilized useToast hook to manage toast state and retrieve toast data
+- Implemented mapping over toast data to render individual toast components dynamically
+- Integrated ToastProvider to manage the toast rendering context
+- Used ToastViewport component for controlling toast viewport behavior
 
 "
 # Push changes to the remote repository
