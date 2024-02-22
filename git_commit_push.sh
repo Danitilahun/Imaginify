@@ -5,12 +5,12 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: Add pagination and search functionality to Collection component
+feat: Implement custom toast notifications
 
-- Added pagination controls to navigate through pages of images
-- Implemented search functionality when `hasSearch` prop is true
-- Updated Collection component to display recent edits
-- Added Card component to render individual image cards with transformation icons
+- Created ToastProvider, ToastViewport, Toast, ToastTitle, ToastDescription, ToastClose, and ToastAction components for custom toast notifications
+- Used Radix UI's toast primitives for building the components
+- Added variant handling for different toast styles (default and destructive)
+- Enhanced accessibility and interaction behaviors for toast components
 
 "
 # Push changes to the remote repository
