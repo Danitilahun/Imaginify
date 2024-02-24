@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: adding api data for clerk and stripe
+feat: update package.json file
 "
 # Push changes to the remote repository
 git push origin HEAD
