@@ -5,7 +5,7 @@ git add .
 
 # Commit changes with the specified commit message
 git commit -m "
-feat: update package.json file
+feat: adding all changes
 "
 # Push changes to the remote repository
 git push origin HEAD
